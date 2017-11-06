@@ -9,14 +9,11 @@ public class Main {
     /**
      * @param b es la base del triángulo
      * @param h es la altura del triángulo
-     * @return devuelve el perímetro del triángulo de acuerdo a la formula: (base * altura) / 2
+     * @return devuelve el perímetro del triángulo de acuerdo a la formula: (base * 2) + (altura * 2)
      * @author Iván Mejía
      */
     public static double perimetroRectangulo(int b, int h) {
-
-        double perimetro = (double) (b * h) / 2;
-
-        return perimetro;
+        return (double) (b * 2) + (h * 2);
     }
 
     public static void main(String[] args) throws IOException {
