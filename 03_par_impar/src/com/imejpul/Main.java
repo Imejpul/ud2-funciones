@@ -35,10 +35,10 @@ public class Main {
         System.out.println("Introduce un valor: ");
         int valor = Integer.parseInt(br.readLine());
 
-        if (par(valor) == true)
+        if (par(valor))
             System.out.println("El valor " + valor + " es par ");
 
-        if (impar(valor) == true)
+        if (impar(valor))
             System.out.println("El valor " + valor + " es impar ");
 
     }
