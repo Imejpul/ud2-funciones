@@ -42,6 +42,8 @@ public class Main {
                 radio = Double.parseDouble(br.readLine());
             }
 
+            // REF: funcion format(): https://docs.oracle.com/javase/tutorial/java/data/numberformat.html
+
             switch (opcion) {
                 case 'a':
                     System.out.printf("La longitud de la circunferencia es: %.3f\n", longitud(radio));
