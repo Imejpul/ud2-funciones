@@ -24,18 +24,33 @@ public class Main {
 
         //valores de cambios de divisas tomados a 06/11/2017
 
-        if (m.equalsIgnoreCase("usd"))
-            // 1 euro = 1,16115 Dolares.
-            cambio = e * 1.16115;
-        else if (m.equalsIgnoreCase("gbp"))
-            // 1 euro = 0.88832 Libras esterlinas.
-            cambio = e * 0.88832;
-        else if (m.equalsIgnoreCase("cny"))
-            // 1 euro = 0.12994 Yuanes.
-            cambio = e * 0.12994;
-        else if (m.equalsIgnoreCase("jpy"))
-            // 1 euro = 132.7235 Yenes.
-            cambio = e * 132.7235;
+        switch (m.toLowerCase()){
+
+            case "usd":
+                // 1 euro = 1,16115 Dolares.
+                cambio = e * 1.16115;
+                break;
+
+            case "gbp":
+                // 1 euro = 0.88832 Libras esterlinas.
+                cambio = e * 0.88832;
+                break;
+
+            case "cny":
+                // 1 euro = 0.12994 Yuanes.
+                cambio = e * 0.12994;
+                break;
+
+            case "jpy":
+                // 1 euro = 132.7235 Yenes.
+                cambio = e * 132.7235;
+                break;
+
+            default:
+                System.out.println("¡Error!");
+                break;
+        }
+
         return cambio;
     }
 
@@ -50,14 +65,29 @@ public class Main {
         String divisa = br.readLine();
         String moneda = "";
 
-        if (divisa.equalsIgnoreCase("usd"))
-            moneda = "Dolares";
-        else if (divisa.equalsIgnoreCase("gbp"))
-            moneda = "Libras esterlinas";
-        else if (divisa.equalsIgnoreCase("cny"))
-            moneda = "Yuanes";
-        else if (divisa.equalsIgnoreCase("jpy"))
-            moneda = "Yenes";
+
+        switch(divisa.toLowerCase()){
+            case "usd":
+                moneda = "Dolares";
+                break;
+
+            case "gbp":
+                moneda = "Libras esterlinas";
+                break;
+
+            case "cny":
+                moneda = "Yuanes";
+                break;
+
+            case "jpy":
+                moneda = "Yenes";
+                break;
+
+            default:
+                System.out.println("¡Error!");
+                break;
+
+        }
 
         double cambio = calcularCambio(euros, divisa);
 

@@ -13,7 +13,7 @@ public class Main {
      * @author Iván Mejía
      */
     public static double perimetroRectangulo(int b, int h) {
-        return (double) (b * 2) + (h * 2);
+        return (b * 2) + (h * 2);
     }
 
     public static void main(String[] args) throws IOException {
