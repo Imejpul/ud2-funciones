@@ -7,7 +7,18 @@ import java.io.InputStreamReader;
 public class Main {
 
     public static int fibonacci_iterativo(int n) {
-        return 0;
+
+        int a = 0;
+        int b = 1;
+        int c;
+
+        for (int i = 0; i < n; i++) {
+            c = b + a;
+            a = b;
+            b = c;
+        }
+
+        return a;
     }
 
     public static int fibonacci_recursivo(int n) {
@@ -26,8 +37,6 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        // System.out.println(fibonacci_iterativo(7));
-
         //-----------------------------------MODO RECURSIVO----------------------------------------
 
         System.out.print("Introduce el número de termino de la sucesión de fibonacci a calcular: ");
@@ -39,6 +48,10 @@ public class Main {
         }
 
         System.out.println(fibTermino);
+
+        //----------------------------------MODO ITERATIVO-------------------------------------------
+
+        System.out.println(fibonacci_iterativo(termino));
 
     }
 }
